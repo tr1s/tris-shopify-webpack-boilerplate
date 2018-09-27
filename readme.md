@@ -1,5 +1,3 @@
-![](https://javascript30.com/images/JS3-social-share.png)
-
 # tris-shopify-webpack-boilerplate
 
 This boilerplate is great for working with Shopify from scratch as well as migrating existing Shopify themes and building overtop of them.
