@@ -2,27 +2,22 @@
 
 # tris-shopify-webpack-boilerplate
 
-If you need to build overtop of a Shopify Theme, then this will get you going in no time.
-A boilerplate workflow for working with Shopify from scratch as well as migrating existing Shopify themes.
+This boilerplate is great for working with Shopify from scratch as well as migrating existing Shopify themes and building overtop of them.
 
 
-Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
+## Usage
 
-## Community #JavaScript30 Content
+Use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Shopify and then...
 
-Feel free to submit a PR adding a link to your own recaps, guides or reviews!
-
-* [Arjun Khode’s blog](http://thesagittariusme.blogspot.com/search/label/JS30) about summaries for each day, including fixed glitches, bugs and extra features
-* [Nitish Dayal's Text Guides](https://github.com/nitishdayal/JavaScript30) are great for those who like reading over watching
-* [Meredith Underell's](http://meredithunderell.com/tag/javascript30/) Quick Lessons Learned
-* [Rowan Weismiller's](http://rowanweismiller.com/blog/javascript-30/) Recaps + Lessons Learned
-* [Thorsten Frommen](https://tfrommen.de/tag/javascript-30/) shares how he solved the exercises before viewing the answers
-* [Soyaine 写的中文指南](https://github.com/soyaine/JavaScript30)包含了过程记录和难点解释
+`npm install`
+`npm run watch` will build/bundle js and scss.liquid into shopify assets folder
+`npm run watchall` will do the above *and* run `theme watch` all at once
+`npm run build` will build/bundle js minified but the scss.liquid will still stay unoptimized for Shopify to handle
 
 ## A note on Pull Requests
 
-These are meant to be 1:1 copies of what is done in the video. If you found a better / different way to do things, great, but I will be keeping them the same as the videos.
-
-The starter files + solutions will be updated if/when the videos are updated.
+If you feel you can make this better, feel free to submit a pull request!
 
 Thanks!
+
+Follow me on [twitter](https://twitter.com/triscodes) 💎.
