@@ -8,9 +8,9 @@ This boilerplate is great for working with Shopify from scratch as well as migra
 Use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Shopify and then...
 
 * `npm install`
-* `npm run watch` will build/bundle js and scss.liquid into shopify assets folder
+* `npm run watch` will watch and bundle both the scripts and styles into shopify assets folder
 * `npm run watchall` will do the above *and* run `theme watch` all at once
-* `npm run build` will build/bundle js minified but the scss.liquid will still stay unoptimized for Shopify to handle
+* `npm run build` will build/bundle minified js but the scss.liquid will still stay unoptimized for Shopify to handle
 
 ## A note on Pull Requests
 
