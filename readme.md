@@ -9,7 +9,7 @@ The idea of this boilerplate is to get you started developing on Shopify's platf
 Use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Shopify and then...
 
 * `npm install`
-* `theme watch` to have Themekit watch all your files and then upload them to Shopify's servers (your store) upon any changes
+* `theme watch` Themekit watches all your files and then uploads them to your store upon any changes
 * `npm run watch` will watch for changes and then bundle both the scripts and styles into shopify assets folder
 * `npm run watchall` will do the above two tasks combined in one terminal window
 * `npm run build` will bundle and uglify your scripts but the styles will still stay unoptimized for Shopify to handle
