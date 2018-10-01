@@ -26,7 +26,7 @@ If you need more complicated liquid syntaxing in your project then insert it via
 
 When you pull down a Theme to use, it will most likely have a few core js files in the assets folder, along with the main theme styles. We can help redude the amount of requests your store makes by letting Webpack bundle these scripts and styles in to one file.
 
-Firstly, move all of your core js files from `assets/` into `src/script/core/` and then import those core files into the `src/theme.js` file.
+Firstly, move all of your core js files from `assets/` into `src/scripts/core/` and then import those core files into the `src/theme.js` file.
 Secondly, move the main styles for the theme from your `assets/` into your `src/styles/` and import them into your `theme.scss` right above where you plan to input your own custom styles.
 
 ## A note on Pull Requests
@@ -35,4 +35,4 @@ If you can make this better, feel free to submit a pull request!
 
 Thanks!
 
-Follow me on twitter @[triscodes](https://twitter.com/triscodes) 💎.
+Follow me on twitter [@triscodes](https://twitter.com/triscodes) 💎.
