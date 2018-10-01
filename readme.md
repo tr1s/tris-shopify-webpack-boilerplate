@@ -26,8 +26,19 @@ If you need more complicated liquid syntaxing in your project then insert it via
 
 When you pull down a Theme to use, it will most likely have a few core js files in the assets folder, along with the main theme styles. We can help redude the amount of requests your store makes by letting Webpack bundle these scripts and styles in to one file.
 
-Firstly, move all of your core js files from `assets/` into `src/scripts/core/` and then import those core files into the `src/theme.js` file.
-Secondly, move the main styles for the theme from your `assets/` into your `src/styles/` and import them into your `theme.scss` right above where you plan to input your own custom styles.
+Firstly, move all of your core js files from `assets/` into `src/scripts/core/` and then import those core files into the `src/theme.js` file. E.g `import 'src/scripts/core/core-file-1.js`.
+
+Secondly, move the main styles for the theme from your `assets/` into your `src/styles/` and import them into your `theme.scss` right above where you plan to input your own custom styles. E.g `@import "./styles/global/_shopify-theme.scss";`.
+
+If you check back in the console you might come across some undefined variable errors 😩, don’t panic. This will be because the theme contained some libraries that export themselves as modules instead of global variables if the libraries detect you’re now using an environment that supports exports. There are a few ways you can deal with this...
+
+* The “correct” but time consuming way: **Split the libraries out and import them individually, maybe moving some dependencies like JQuery to be managed with NPM.**
+
+* The quick but risky way: **Remove the exports code condition from the libraries source code so it forces the lib to be included as a global.**
+
+* The quick and safe but less optimised way: **Leave the file with the imported libraries as a separate script included in `layout/theme.liquid`**
+
+For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default) the file called `vendor.js` contains all these types of libraries so you can just move this file back into the `layout/theme.liquid` for the time being.
 
 ## A note on Pull Requests
 
