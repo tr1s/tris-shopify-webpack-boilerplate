@@ -38,7 +38,7 @@ If you check back in the console you might come across some undefined variable e
 
 * The quick and safe but less optimised way: **Leave the file with the imported libraries as a separate script included in `layout/theme.liquid`**
 
-For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default) the file called `vendor.js` contains all these types of libraries so you can just move this file back into the `layout/theme.liquid` for the time being.
+For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default), the file called `vendor.js` contains all these types of libraries so you can just move this file back into the `layout/theme.liquid` for the time being.
 
 ## A note on Pull Requests
 
