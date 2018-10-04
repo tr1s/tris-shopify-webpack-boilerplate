@@ -46,6 +46,10 @@ If you check back in the console you might come across some undefined variable e
 
 For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default), the file called `vendor.js` contains all these types of libraries, so you can just move this file back into the `layout/theme.liquid` for the time being if you don't want the store fully optimized. That or you might be in a time crunch and will get to it later, right?
 
+## CSS Frameworks
+
+My favourite CSS framwork [Bulma](https://bulma.io/) is included in this setup. If you would like to use something different, or nothing at all, feel free to `npm uninstall bulma` and remove `@import "../node_modules/bulma/bulma";` from the `theme.scss`.
+
 ## A note on Pull Requests
 
 If you can make this better, or notice any issues, please feel free to submit a pull request!
