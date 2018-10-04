@@ -3,5 +3,6 @@
 import './theme'; // imports all of theme.scss styles
 
 
-// begin your custom JS/jQuery below
+// begin your custom JS/jQuery below or create a modular
+// system of custom code in the `scripts/` folder
 console.log('Webpack!!!!!!!!!!!!!!');
