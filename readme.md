@@ -18,7 +18,7 @@ Use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Sh
 
 * **Live Reloading** — `webpack-dev-server` will not work because the files are hosted on Shopify's servers. I personally have been using [LivePage](https://livepage.mikerogers.io/) chrome extension. It simply watches the web page for any server changes, and refreshes the page right after the server updates.
 
-Sometimes you'll hit too many requests and Shopify will temporarily block you out. To fix this, go into LivePage settings and change the *Polling Settings:* to `2000ms` instead of `200ms`.
+Sometimes you'll hit too many requests and Shopify will temporarily block you out. To fix this, go into LivePage settings and change the `Polling Settings:` to `2000ms` instead of `200ms`.
 
 * **Liquid Syntaxing** — You cannot use liquid syntax inside of your src/ `.scss`/`.js` files nor will Webpack compile `.scss.liquid`/`.js.liquid` files, so do not rename them to that. You can however get away with some liquid syntax, for example use `background-image: url( "{{ '../path/to/assets/img.jpg' | asset_url }}" )` for retrieving and using assets. The quotes around the liquid tags allow this to work. The quotes around the path and liquid tags can't be the same, use double quotes for one and single quotes for the other.
 
