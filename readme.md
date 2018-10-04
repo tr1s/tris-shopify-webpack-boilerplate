@@ -16,7 +16,7 @@ Use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Sh
 
 ## Caveats
 
-* **Live Reloading** —— `webpack-dev-server` will not work because the files are hosted on Shopify's servers. I personally have been using [LivePage](https://livepage.mikerogers.io/) chrome extension. It simply watches the web page for any server changes, and refreshes the page right after the server updates.
+* **Live Reloading** — `webpack-dev-server` will not work because the files are hosted on Shopify's servers. I personally have been using [LivePage](https://livepage.mikerogers.io/) chrome extension. It simply watches the web page for any server changes, and refreshes the page right after the server updates.
 
 Sometimes you'll hit too many requests and Shopify will temporarily block you out. To fix this, go into LivePage settings and change the *Polling Settings:* to `2000ms` instead of `200ms`.
 
@@ -24,7 +24,7 @@ Sometimes you'll hit too many requests and Shopify will temporarily block you ou
 
 If you need more complicated liquid syntaxing in your project then insert it via scss `{% stylesheets %}` and js `{% scripts %}` at the end of your sections.
 
-* **CSS optimizations** —— The npm plugin for Webpack `optimize-css-assets-webpack-plugin` does not work in this case because it will not optimize `.scss` nor `.scss.liquid` files into css. That's why we can't do things like minification. However Webpack will handle autoprefixing and Shopify will handle the rest of the optimizing of the `.scss.liquid` file in your assets folder. No need to worry.
+* **CSS optimizations** — The npm plugin for Webpack `optimize-css-assets-webpack-plugin` does not work in this case because it will not optimize `.scss` nor `.scss.liquid` files into css. That's why we can't do things like minification. However Webpack will handle autoprefixing and Shopify will handle the rest of the optimizing of the `.scss.liquid` file in your assets folder. No need to worry.
 
 ## Dealing with a Shopify Theme's core JS/SCSS files
 
