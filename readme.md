@@ -36,7 +36,7 @@ Secondly, move all of your core js files from `assets/` into `src/scripts/core/`
 
 ---------------------------
 
-If you check back in the console you might come across some undefined variable errors 🧐, don’t panic. This will be because the theme contained some libraries that export themselves as modules instead of global variables if the libraries detect you’re now using an environment that supports exports. There are a few ways you can deal with this...
+If you check back in the console you *might* come across some undefined variable errors ⚠️, don’t panic. This will be because the theme contained some libraries that export themselves as modules instead of global variables if the libraries detect you’re now using an environment that supports exports. There are a few ways you can deal with this...
 
 * The “correct” but time consuming way: **Split the libraries out and import them individually, maybe moving some dependencies like JQuery to be managed with NPM.**
 
@@ -44,7 +44,7 @@ If you check back in the console you might come across some undefined variable e
 
 * The quick and safe but less optimized way: **Leave the file with the imported libraries as a separate script included in `layout/theme.liquid`**
 
-For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default), the file called `vendor.js` contains all these types of libraries, so you can just move this file back into the `layout/theme.liquid` for the time being if you don't want the store fully optimized. That or you might be in a time crunch and will get to it later, right?
+For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default), the file called `vendor.js` contains all these types of libraries, so you can just move this file back into the `assets` folder for now and you'll be fine, I promise.
 
 ## CSS Frameworks
 
