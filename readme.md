@@ -22,7 +22,19 @@ Sometimes you'll hit too many requests and Shopify will temporarily block you ou
 
 * **Liquid Syntaxing** — You cannot use liquid syntax inside of your src/ `.scss`/`.js` files nor will Webpack compile `.scss.liquid`/`.js.liquid` files, so do not rename them to that. You can however get away with some liquid syntax, for example use `background-image: url( "{{ '../path/to/assets/img.jpg' | asset_url }}" )` for retrieving and using assets. The quotes around the liquid tags allow this to work. The quotes around the path and liquid tags can't be the same, use double quotes for one and single quotes for the other.
 
-* **Liquid Syntaxing (Sass Interpolation)** — Another way to use liquid in your css and js is to use Sass Interpolation. See the articles below for now. (I will write examples here soon)
+* **Liquid Syntaxing (Sass Interpolation)** — Another way to use liquid in your scss and js is to use _Sass Interpolation_. Interpolating is the process of evaluating an expression or a string containing one or more variables, producing a result in which the variables are replaced with their corresponding values in memory, [according to this article all about Sass interpolation](https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375). What that means is when Sass processes an expression or string containing one or more variables using interpolation, it replaces the `#{$variable}` with the variable value in memory, rather than trying to execute the expression or string using those variables as values in the original process. You can think of Sass interpolation as a way of escaping certain values, variables, or syntax that might otherwise be misinterpreted by Sass.
+
+Here are some examples:
+
+```
+a {
+  color: #{'{{ settings.color-link }}'};
+}
+```
+
+Will compile to `a { color: #2980b9; }`
+
+
 
 Here are some resources on Sass interpolation.
 
