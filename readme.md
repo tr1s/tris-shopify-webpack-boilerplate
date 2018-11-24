@@ -22,6 +22,13 @@ Sometimes you'll hit too many requests and Shopify will temporarily block you ou
 
 * **Liquid Syntaxing** — You cannot use liquid syntax inside of your src/ `.scss`/`.js` files nor will Webpack compile `.scss.liquid`/`.js.liquid` files, so do not rename them to that. You can however get away with some liquid syntax, for example use `background-image: url( "{{ '../path/to/assets/img.jpg' | asset_url }}" )` for retrieving and using assets. The quotes around the liquid tags allow this to work. The quotes around the path and liquid tags can't be the same, use double quotes for one and single quotes for the other.
 
+* **Liquid Syntaxing (Sass Interpolation)** — Another way to use liquid in your css and js is to use Sass Interpolation. See the articles below for now. (I will write examples here soon)
+
+Here are some resources on Sass interpolation.
+
+1. [A beginners guide to Sass Interpolation](https://www.shopify.ca/partners/blog/a-beginners-guide-to-sass-with-shopify-part-3)
+2. [All You Ever Need to Know About Sass Interpolation](https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
+
 If you need more complicated liquid syntaxing in your project then insert it via scss `{% stylesheets %}` and js `{% scripts %}` at the end of your sections.
 
 * **CSS optimizations** — The npm plugin for Webpack `optimize-css-assets-webpack-plugin` does not work in this case because it will not optimize `.scss` nor `.scss.liquid` files into css. That's why we can't do things like minification. However Webpack will handle autoprefixing and Shopify will handle the rest of the optimizing of the `.scss.liquid` file in your assets folder. No need to worry.
@@ -52,8 +59,8 @@ My favourite CSS framwork [Bulma](https://bulma.io/) is included in this setup. 
 
 ## A note on Pull Requests
 
-If you can make this better, or notice any issues, please feel free to submit a pull request!
+If you can make this better, or notice any issues, please feel free to submit a pull request.
 
-Thanks!
+Thanks!!
 
 Follow me on twitter [@triscodes](https://twitter.com/triscodes) 💎.

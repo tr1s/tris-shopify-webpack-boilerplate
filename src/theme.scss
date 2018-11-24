@@ -1,8 +1,10 @@
+//? setup
+@import "./styles/global/setup";                 // normalize, clearfix, border-box, anti-aliasing, grey-scale
 
+//? css framework
+@import "../node_modules/bulma/bulma";           // css framework
 
 //? global
-@import "../node_modules/bulma/bulma";           // css framework
-@import "./styles/global/setup";                 // normalize, clearfix, border-box, anti-aliasing, grey-scale
 @import "./styles/global/mixins";                // global mixins
 @import "./styles/global/variables";             // global variables
 @import "./styles/global/typography";            // global typography
