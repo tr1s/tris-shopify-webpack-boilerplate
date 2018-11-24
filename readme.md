@@ -34,9 +34,9 @@ a {
 
 Will compile to `a { color: #2980b9; }`
 
+You can find other examples of how to escape Liquid code in Sass files [in this awesome Gist](https://gist.github.com/shopifypartners/d66e0725687a195a2d49974b535f8025) made by Shopify Expert [Stewart Knapman](https://twitter.com/stewartknapman)!
 
-
-Here are some resources on Sass interpolation.
+Here are some extra resources on Sass interpolation:
 
 1. [A beginners guide to Sass Interpolation](https://www.shopify.ca/partners/blog/a-beginners-guide-to-sass-with-shopify-part-3)
 2. [All You Ever Need to Know About Sass Interpolation](https://webdesign.tutsplus.com/tutorials/all-you-ever-need-to-know-about-sass-interpolation--cms-21375)
