@@ -6,7 +6,14 @@ The idea of this boilerplate is to get you started doing custom development on S
 
 ## Usage
 
-Use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Shopify and then...
+You need [git](https://git-scm.com/), [node.js](https://nodejs.org/), and [ThemeKit](https://shopify.github.io/themekit/) on your computer before running.
+
+First you need to...
+
+* `git clone https://github.com/tr1s/tris-shopify-webpack-boilerplate.git`
+* `cd` into the project and then `rm -rf .git` to disconnect from this repo
+
+Then use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Shopify. This will bring all of your Shopify files into the project. Then...
 
 * `npm install`
 * `theme watch` Themekit watches all your Shopify files and then uploads them to your store upon any changes
