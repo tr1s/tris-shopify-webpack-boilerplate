@@ -19,10 +19,10 @@ First you need to...
 Then use [Themekit](https://shopify.github.io/themekit/) to pull down a theme from Shopify. This will bring all of your Shopify files into the project. Then...
 
 * `npm install`
-* `theme watch` Themekit watches all your Shopify files and then uploads them to your store upon any changes
-* `npm run watch` will watch for changes in the `src/` and then bundle both the scripts and styles into Shopify's assets folder
+* `theme watch` ThemeKit watches the `assets/` folder for changes and uploads to the servers on change
+* `npm run watch` will watch for changes in the `src/` and then bundle both the scripts and styles into Shopify's `assets/` folder
 * `npm run watchall` will do the above two tasks combined in one terminal window
-* `npm run build` will bundle and uglify your scripts but the styles will still stay unoptimized for Shopify to handle
+* `npm run build` will bundle and uglify your scripts into the `assets/` for production ** `theme-webpack.scss.liquid` will stay un-minified because Shopify's servers will handle that.
 
 ## Caveats
 
