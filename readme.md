@@ -1,5 +1,8 @@
 # tris-shopify-webpack-boilerplate
 
+[![](https://img.shields.io/david/tr1s/tris-shopify-webpack-boilerplate.svg)](https://github.com/tr1s/tris-shopify-webpack-boilerplate)
+[![](https://img.shields.io/david/dev/tr1s/tris-shopify-webpack-boilerplate.svg)](https://github.com/tr1s/tris-shopify-webpack-boilerplate)
+
 This boilerplate is great for working with Shopify from scratch as well as migrating existing Shopify themes and building overtop of them. It uses Webpack 4 to bundle all your js and compile your styles into Shopify's assets folder.
 
 The idea of this boilerplate is to get you started doing custom development on Shopify's platform with minimal effort while reducing the amount of http requests your store sends off. We'll achieve this by bundling all of our scripts/styles into 1 file each.
