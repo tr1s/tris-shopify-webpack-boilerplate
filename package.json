@@ -4,8 +4,8 @@
   "description": "A webpack boilerplate for Shopify development",
   "main": "theme.js",
   "scripts": {
-    "start": "webpack --watch --mode development",
-    "watch": "concurrently \"theme watch\" \"webpack --watch --mode development\"",
+    "watch": "webpack --watch --mode development",
+    "watchall": "concurrently \"theme watch\" \"webpack --watch --mode development\"",
     "build": "webpack --mode production"
   },
   "keywords": [],

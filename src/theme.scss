@@ -1,17 +1,16 @@
-//? setup
-@import "./styles/global/setup";                 // normalize, clearfix, border-box, anti-aliasing, grey-scale
-
 //? css framework
-@import "../node_modules/bulma/bulma";           // css framework
+// @import "../node_modules/bulma/bulma";     // css framework
 
-//? global
-@import "./styles/global/mixins";                // global mixins
-@import "./styles/global/variables";             // global variables
-@import "./styles/global/typography";            // global typography
-@import "./styles/global/global";                // global styles
+//? utils
+@import "./styles/utils/mixins";              // global mixins
+@import "./styles/utils/variables";           // global variables
+
+//? base
+@import "./styles/base/setup";                // normalize, clearfix, border-box, anti-aliasing, grey-scale
+@import "./styles/base/typography";           // global typography
+
+//? global styles
+@import "./styles/global";                    // global styles
 
 //? sections
 @import "./styles/sections/_header";
-@import "./styles/sections/_footer";
-
-//? snippets

@@ -77,7 +77,7 @@ For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/
 
 ## CSS Frameworks
 
-My favourite CSS framwork [Bulma](https://bulma.io/) is included in this setup. If you would like to use something different, or nothing at all, feel free to `npm uninstall bulma` and remove `@import "../node_modules/bulma/bulma";` from the `theme.scss`.
+My favourite CSS framwork [Bulma](https://bulma.io/) is included in this setup. Uncomment the `@import "../node_modules/bulma/bulma";` if you would like to use it, otherwise feel free to `npm uninstall bulma` and remove `@import "../node_modules/bulma/bulma";` from the `theme.scss` altogether.
 
 ## A note on Pull Requests
 
