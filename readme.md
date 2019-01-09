@@ -7,7 +7,7 @@ This boilerplate is great for working with Shopify from scratch as well as migra
 
 The idea of this boilerplate is to get you started doing custom development on Shopify's platform with minimal effort while reducing the amount of http requests your store sends off. We'll achieve this by bundling all of our scripts/styles into 1 file each.
 
-## Usage
+# Usage
 
 You need [git](https://git-scm.com/), [node.js](https://nodejs.org/), and [ThemeKit](https://shopify.github.io/themekit/) on your computer before running.
 
@@ -24,7 +24,7 @@ Then use [Themekit](https://shopify.github.io/themekit/) to pull down a theme fr
 * `npm run watchall` will do the above two tasks combined in one terminal window
 * `npm run build` will bundle and uglify your scripts into the `assets/` for production ** `theme-webpack.scss.liquid` will stay un-minified because Shopify's servers will handle that.
 
-## Caveats
+# Caveats
 
 * **Live Reloading** — `webpack-dev-server` will not work because the files are hosted on Shopify's servers. I personally have been using [LivePage](https://livepage.mikerogers.io/) chrome extension. It simply watches the web page for any server changes, and refreshes the page right after the server updates.
 
@@ -53,7 +53,7 @@ Here are some extra resources on Sass interpolation:
 
 If you need more complicated liquid syntaxing in your project then insert it via scss `{% stylesheets %}` and js `{% scripts %}` at the end of your sections.
 
-## CSS optimizations
+# CSS optimizations
 
 [Postcss]() will handle all of our CSS optimizations before it gets sent to the assets folder. We use [autoprefixer](https://github.com/postcss/autoprefixer) (for vendor prefixing), [cssnano](https://github.com/cssnano/cssnano) (for minification), and [purgecss](https://www.purgecss.com/) (for removing unused css). Read their documentation if you'd like to customize further.
 
@@ -76,7 +76,7 @@ module.exports = {
 };
 ```
 
-## Dealing with a Shopify Theme's core JS/SCSS files
+# Dealing with a Shopify Theme's core JS/SCSS files
 
 When you pull down a Theme to use, it will most likely have a few core js files in the assets folder, along with the main theme styles. We can help reduce the amount of requests your store makes by letting Webpack bundle these scripts and styles in to one file.
 
@@ -96,11 +96,11 @@ If you check back in the console you *might* come across some undefined variable
 
 For example in the [Debut Theme](https://themes.shopify.com/themes/debut/styles/default), the file called `vendor.js` contains all these types of libraries, so you can just move this file back into the `assets` folder for now and you'll be fine, I promise.
 
-## CSS Frameworks
+# CSS Frameworks
 
 My favourite CSS framwork [Bulma](https://bulma.io/) is included in this setup. Uncomment the `@import "../node_modules/bulma/bulma";` if you would like to use it, otherwise feel free to `npm uninstall bulma` and remove `@import "../node_modules/bulma/bulma";` from the `theme.scss` altogether.
 
-## A note on Pull Requests
+# A note on Pull Requests
 
 If you can make this better, or notice any issues, please feel free to submit a pull request.
 
