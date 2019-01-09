@@ -53,7 +53,28 @@ Here are some extra resources on Sass interpolation:
 
 If you need more complicated liquid syntaxing in your project then insert it via scss `{% stylesheets %}` and js `{% scripts %}` at the end of your sections.
 
-* **CSS optimizations** — The npm plugin for Webpack `optimize-css-assets-webpack-plugin` does not work in this case because it will not optimize `.scss` nor `.scss.liquid` files into css. That's why we can't do things like minification. However Webpack will handle autoprefixing and Shopify will handle the rest of the optimizing of the `.scss.liquid` file in your assets folder. No need to worry.
+## CSS optimizations
+
+[Postcss]() will handle all of our CSS optimizations before it gets sent to the assets folder. We use [autoprefixer](https://github.com/postcss/autoprefixer) (for vendor prefixing), [cssnano](https://github.com/cssnano/cssnano) (for minification), and [purgecss](https://www.purgecss.com/) (for removing unused css). Read their documentation if you'd like to customize further.
+
+```js
+/* postcss.config.js */
+
+const purgecss = require('@fullhuman/postcss-purgecss');
+
+module.exports = {
+  plugins: [
+    require("autoprefixer"),
+    require('cssnano')({
+        preset: 'default',
+    }),
+    purgecss({
+      content: ['./**/*.html', './**/*.liquid'],
+      keyframes: true
+    })
+  ],
+};
+```
 
 ## Dealing with a Shopify Theme's core JS/SCSS files
 
@@ -84,5 +105,7 @@ My favourite CSS framwork [Bulma](https://bulma.io/) is included in this setup. 
 If you can make this better, or notice any issues, please feel free to submit a pull request.
 
 Thanks!!
+
+___
 
 Follow me on twitter [@triscodes](https://twitter.com/triscodes) 💎.
