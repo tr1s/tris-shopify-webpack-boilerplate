@@ -1,0 +1,31 @@
+//! import google fonts
+// @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+//! import a custom font below
+// @font-face {
+//   font-family: 'font-name';
+//   font-display: fallback;
+//   src: url('{{ '../path/to/font' | asset_url }}') format('');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+//! set font variables
+$font-heading: serif;
+$font-body: sans-serif;
+
+html {
+  font-size: 62.5%; // 1rem = 10px, 3.5rem = 35px;
+}
+
+body {
+  font-family: $font-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: $font-heading;
+}

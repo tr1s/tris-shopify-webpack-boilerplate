@@ -1,7 +1,3 @@
-console.log('Hello from theme.js!!!');
+console.log('Hello from src/theme.js 👋');
 
 import './theme.scss';
-
-// imports will go here
-// import './core/core-file'
-// import './libraries/library-file'
